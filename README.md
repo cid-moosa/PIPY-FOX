@@ -44,7 +44,7 @@ If your adapter uses the same chipset, it will usually work the same way.
 
 ## Installation & Usage (Step-by-Step)
 
-### STEP 1 
+## STEP 1 
 Plug in the adapter and verify detection
 
 Open a terminal and run:
@@ -58,12 +58,12 @@ git clone https://github.com/USERNAME/REPOSITORY.git
 cd REPOSITORY
 ```
 
-#STEP 3 Run PIPY FOX
+##STEP 3 Run PIPY FOX
 ```
 sudo python3 pipy_fox.py
 ```
 
-#STEP 4 Reboot
+##STEP 4 Reboot
 ```
 sudo reboot
 ```
