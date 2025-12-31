@@ -1,94 +1,51 @@
 
-**PIPY FOX** is a single-file Python 3 CLI automation script for **TP-Link USB Wi-Fi adapters (V2 / V3)**.  
-Its primary aim is to install drivers that enable **monitor mode** and **packet injection** where the driver/chipset supports those features — for legitimate research, testing, and educational use.
+**PIPY FOX** is a single-file Python 3 CLI automation script built for **Kali Linux and Parrot OS**.  
+It automates installing drivers for **TP-Link USB Wi-Fi adapters (V2 / V3)**.
 
-> **Important:** PIPY FOX automates installation only. It does **not** create or claim ownership of the drivers. Drivers remain the intellectual property of their original authors.
+The main goal of this automation is to install drivers that allow **monitor mode** and **packet injection** *where the driver and chipset support those features*.
 
----
-
-## Quick facts
-
-- Project file: `pipy_fox.py` (single file)  
-- Target: **Kali Linux / Parrot OS** (Linux)  
-- Requires: Python **3.8+**, `sudo`/root, internet access  
-- Behavior: Downloads needed files, installs drivers, then removes downloaded files and (by default) prompts to delete the installer script itself (self-destruct).
+> ⚠️ PIPY FOX does **not** create, modify, or own any drivers.  
+> It only automates the installation process.  
+> All rights and responsibility for the drivers belong to their original authors.
 
 ---
 
-## Supported Models — V2 / V3
+## What this project does
 
-Targets **TP-Link USB Wi-Fi adapters V2 / V3**.  
-Later revisions that use the **same Realtek chipset** are likely compatible.
-
-**Primary aim:** Enable **monitor mode** and **packet injection** (where supported) for lawful research and testing.
-
-> **Note:** V1 adapters are plug-and-play and are not targeted by this project.
+- Uses **one Python file** (`pipy_fox.py`)
+- Runs fully in the terminal (CLI)
+- Shows simple animations during installation
+- Downloads required driver files from upstream sources
+- Installs the driver automatically
+- Deletes downloaded files after installation
+- Prompts the user to delete the installer script itself (self-destruct)
 
 ---
 
-## Quick Start — Copy/paste steps
+## Supported models
 
-> Replace `USERNAME/REPOSITORY` with your GitHub path and ensure `pipy_fox.py` is the script filename.
+This project targets **TP-Link USB Wi-Fi adapters V2 / V3**.
 
+Some newer revisions of the same models use the **same Realtek chipset** and behave exactly like V2 / V3.  
+If your adapter uses the same chipset, it will usually work the same way.
+
+> V1 adapters are plug-and-play and are **not** targeted by this project.
+
+---
+
+## Requirements
+
+- Kali Linux or Parrot OS  
+- Python **3.8 or newer**
+- Root / `sudo` access
+- Internet connection (to download drivers)
+
+---
+
+## Installation & Usage (Step-by-Step)
+
+### Step 1 — Plug in the adapter and verify detection
+
+Open a terminal and run:
 ```bash
-# ---------------------------
-# 1) Verify the adapter is visible
-# ---------------------------
 lsusb
-# optional filtered search:
-lsusb | grep -i tp-link || lsusb | grep -i realtek
-
-# ---------------------------
-# 2) Clone the repository
-# ---------------------------
-git clone https://github.com/USERNAME/REPOSITORY.git
-cd REPOSITORY
-
-# ---------------------------
-# 3) (Optional) Create & activate a Python virtual environment
-# ---------------------------
-python3 -m venv .venv
-source .venv/bin/activate
-
-# ---------------------------
-# 4) (Optional) Install Python dependencies if a requirements.txt exists
-# ---------------------------
-if [ -f requirements.txt ]; then
-  pip install --upgrade pip
-  pip install -r requirements.txt
-fi
-
-# ---------------------------
-# 5) Run the installer (normal mode)
-# ---------------------------
-sudo python3 pipy_fox.py
-
-# or: switch to root first, then run:
-# sudo su
-# python3 pipy_fox.py
-
-# When prompted at the end:
-#  - press 'y' to confirm removing downloaded files and delete the installer (self-destruct)
-#  - press 'n' to keep files for inspection
-
-# ---------------------------
-# 6) Run the installer (debug / inspect mode — if supported by the script)
-# ---------------------------
-sudo python3 pipy_fox.py --no-cleanup --verbose
-
-# ---------------------------
-# 7) If a reboot is recommended by the script
-# ---------------------------
-sudo reboot
-
-# ---------------------------
-# 8) Quick troubleshooting commands
-# ---------------------------
-# Check kernel messages after plugging the adapter in
-dmesg | tail -n 50
-
-# Re-check USB devices
-lsusb
-
-# Inspect detailed USB info for a specific VID:PID (example)
-# lsusb -v -d 0bda:8179
