@@ -48,22 +48,23 @@ If your adapter uses the same chipset, it will usually work the same way.
 Plug in the adapter and verify detection
 
 Open a terminal and run:
-```bash
+```
 lsusb
 ```
 
-##STEP 2 Clone the repository
+## STEP 2 Clone the repository
+
 ```
 git clone https://github.com/USERNAME/REPOSITORY.git
 cd REPOSITORY
 ```
 
-##STEP 3 Run PIPY FOX
+## STEP 3 Run PIPY FOX
 ```
 sudo python3 pipy_fox.py
 ```
 
-##STEP 4 Reboot
+## STEP 4 Reboot
 ```
 sudo reboot
 ```
