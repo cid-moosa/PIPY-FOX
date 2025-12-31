@@ -55,7 +55,7 @@ lsusb
 ## STEP 2 Clone the repository
 
 ```
-git clone https://github.com/USERNAME/REPOSITORY.git
+git clone https://github.com/cid-moosa/PIPY-FOX.git
 cd REPOSITORY
 ```
 
