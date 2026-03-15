@@ -56,7 +56,7 @@ lsusb
 
 ```
 git clone https://github.com/cid-moosa/PIPY-FOX.git
-cd REPOSITORY
+cd PIPY-FOX
 ```
 
 ## STEP 3 Run PIPY FOX
