@@ -1,5 +1,5 @@
 
-**PIPY FOX** is a single-file Python 3 CLI automation script built for **Kali Linux and Parrot OS**.  
+**PIPY FOX** is a single-file Python 3 CLI automation script built for **Parrot OS**.(recommend os is **parrot** ,in kali this installation will not work property)  
 It automates installing drivers for **TP-Link USB Wi-Fi adapters (V2 / V3)**.
 
 The main goal of this automation is to install drivers that allow **monitor mode** and **packet injection** *where the driver and chipset support those features*.
