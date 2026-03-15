@@ -35,7 +35,7 @@ If your adapter uses the same chipset, it will usually work the same way.
 
 ## Requirements
 
-- Kali Linux or Parrot OS  
+- Parrot OS *only 
 - Python **3.8 or newer**
 - Root / `sudo` access
 - Internet connection (to download drivers)
