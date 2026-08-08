@@ -63,8 +63,3 @@ cd PIPY-FOX
 ```
 sudo python3 pipy_fox.py
 ```
-
-## STEP 4 Reboot
-```
-sudo reboot
-```
