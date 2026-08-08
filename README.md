@@ -12,7 +12,7 @@ The main goal of this automation is to install drivers that allow **monitor mode
 
 ## What this project does
 
-- Uses **one Python file** (`pipy_fox.py`)
+- Uses **one Python file** (`PIPY_FOX_2026.py`)
 - Runs fully in the terminal (CLI)
 - Shows simple animations during installation
 - Downloads required driver files from upstream sources
@@ -61,5 +61,12 @@ cd PIPY-FOX
 
 ## STEP 3 Run PIPY FOX
 ```
-sudo python3 pipy_fox.py
+sudo python3 PIPY_FOX_2026.py
 ```
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
