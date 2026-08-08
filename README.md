@@ -66,7 +66,14 @@ sudo python3 PIPY_FOX_2026.py
 
 ---
 
+## Author & Creator
+
+Created and maintained by **[CID MOOSA](https://github.com/cid-moosa)**.
+
+---
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
 

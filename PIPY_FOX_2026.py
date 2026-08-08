@@ -77,6 +77,7 @@ def disclaimer():
 {Fore.YELLOW}
 ┌────────────────────────────────────────────────────────────────────────────┐
 │                                DISCLAIMER                                  │
+│  Created by: CID MOOSA (https://github.com/cid-moosa)                     │
 │  Installs drivers for the TP-Link TL-WN722N adapter (RTL8188eus chipset).  │
 │  Requires Debian/Ubuntu-like system with sudo privileges.                  │
 └────────────────────────────────────────────────────────────────────────────┘
