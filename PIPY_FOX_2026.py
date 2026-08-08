@@ -151,10 +151,17 @@ def install_driver():
     time.sleep(1)
     dying_fox()
 
-    if input(Fore.YELLOW + "\n[?] Delete this installer script? (y/n): ").lower() == 'y':
+    if input(Fore.YELLOW + "\n[?] Delete installer script and files? (y/n): ").lower() == 'y':
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        license_path = os.path.join(script_dir, "LICENSE")
+        if os.path.exists(license_path):
+            try:
+                os.remove(license_path)
+            except Exception:
+                pass
         try:
             os.remove(os.path.abspath(__file__))
-            print(Fore.RED + "[!] Script deleted.")
+            print(Fore.RED + "[!] Script and LICENSE files deleted.")
         except Exception:
             pass
 
